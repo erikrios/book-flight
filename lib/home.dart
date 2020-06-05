@@ -8,6 +8,11 @@ class Home extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         color: Colors.blue,
+        child: Column(
+          children: [
+            
+          ],
+        ),
       ),
     );
   }
