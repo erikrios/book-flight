@@ -96,7 +96,7 @@ class BookFlightButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
         child: RaisedButton(
-          onPressed: () => {},
+          onPressed: () => _showAlertDialog(context),
           child: Text(
             'Book Your Flight',
             style: TextStyle(
@@ -109,4 +109,14 @@ class BookFlightButton extends StatelessWidget {
         width: 250.0,
         height: 50.0,
       );
+
+  void _showAlertDialog(BuildContext context) {
+    AlertDialog alertDialog = AlertDialog(
+      title: Text('Flight Booked Successfully'),
+      content: Text('Have a pleasant flight'),
+    );
+
+    showDialog(
+        context: context, builder: (BuildContext context) => alertDialog);
+  }
 }
