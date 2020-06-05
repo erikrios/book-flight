@@ -19,6 +19,7 @@ class Home extends StatelessWidget {
               ),
               FlightDestination('Air Asia', 'Jakarta to Silicon Valley'),
               FlightLogo('images/flight.png'),
+              BookFlightButton(),
             ],
           ),
         ),
@@ -84,4 +85,24 @@ class FlightLogo extends StatelessWidget {
       child: image,
     );
   }
+}
+
+class BookFlightButton extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) => Container(
+        child: RaisedButton(
+          onPressed: () => {},
+          child: Text(
+            'Book Your Flight',
+            style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Source Sans Pro',
+                fontSize: 20.0),
+          ),
+          color: Colors.purple,
+        ),
+        width: 250.0,
+        height: 50.0,
+      );
 }
