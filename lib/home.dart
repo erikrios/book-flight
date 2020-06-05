@@ -18,6 +18,7 @@ class Home extends StatelessWidget {
                 margin: EdgeInsets.only(top: 16.0),
               ),
               FlightDestination('Air Asia', 'Jakarta to Silicon Valley'),
+              FlightLogo('images/flight.png'),
             ],
           ),
         ),
@@ -64,4 +65,23 @@ class FlightDestination extends StatelessWidget {
           ),
         ],
       );
+}
+
+class FlightLogo extends StatelessWidget {
+  final String imageLocation;
+
+  FlightLogo(this.imageLocation, {Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage(imageLocation);
+    Image image = Image(
+      image: assetImage,
+      width: 250.0,
+      height: 250.0,
+    );
+    return Container(
+      child: image,
+    );
+  }
 }
