@@ -1,9 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Center(
+      child: Container(
+        alignment: Alignment.center,
+        color: Colors.blue,
+      ),
+    );
   }
 }
