@@ -29,17 +29,20 @@ class Home extends StatelessWidget {
 }
 
 class FlightDestination extends StatelessWidget {
-  final String plane;
-  final String destination;
+  final String _plane;
+  final String _destination;
 
-  FlightDestination(this.plane, this.destination, {key}) : super(key: key);
+  FlightDestination(String plane, String destination, {key})
+      : _plane = plane,
+        _destination = destination,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) => Row(
         children: [
           Expanded(
             child: Text(
-              plane,
+              _plane,
               textAlign: TextAlign.center,
               textDirection: TextDirection.ltr,
               style: TextStyle(
@@ -53,7 +56,7 @@ class FlightDestination extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              destination,
+              _destination,
               textAlign: TextAlign.center,
               textDirection: TextDirection.ltr,
               style: TextStyle(
@@ -69,13 +72,15 @@ class FlightDestination extends StatelessWidget {
 }
 
 class FlightLogo extends StatelessWidget {
-  final String imageLocation;
+  final String _imageLocation;
 
-  FlightLogo(this.imageLocation, {Key key}) : super(key: key);
+  FlightLogo(String imageLocation, {Key key})
+      : _imageLocation = imageLocation,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = AssetImage(imageLocation);
+    AssetImage assetImage = AssetImage(_imageLocation);
     Image image = Image(
       image: assetImage,
       width: 250.0,
@@ -88,7 +93,6 @@ class FlightLogo extends StatelessWidget {
 }
 
 class BookFlightButton extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) => Container(
         child: RaisedButton(
